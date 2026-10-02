@@ -1,0 +1,15 @@
+import sqlite3
+conn = sqlite3.connect("company_vault.db")
+cursor = conn.cursor()
+cursor.execute("UPDATE employees SET department ='Director' WHERE name = 'RAHUL'")
+cursor.execute("DELETE FROM employees WHERE name = 'Amit'")
+conn.commit()
+print("✅ Data Updated and Deleted Successfully!")
+print("-" * 40)
+cursor.execute("SELECT * FROM employees")
+new_data =  cursor.fetchall()
+print("🔄 Tijori ka NAYA Data:")
+for record in new_data:
+    print(record)
+print("-" * 40)
+conn.close()
