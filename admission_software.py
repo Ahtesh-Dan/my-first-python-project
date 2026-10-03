@@ -4,7 +4,7 @@ client=genai.Client(api_key="MERA PASSWORD")
 conn = sqlite3.connect("aks_Univerity.db")
 cursor = conn.cursor()
 cursor.execute('''CREATE TABLE IF NOT EXISTS admission_leads 
- (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, interest TEXT, ai_suggested_branch TEXT)''')hhd    
+ (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, interest TEXT, ai_suggested_branch TEXT)''')    
 print("🎓 AKS University - Smart Admission Cell mein aapka swagat hai!\n")
 student_name = input("student ka naam darj karein")
 student_interest= input(f'{student_name} ko kis cheez me interest hai ? (jaise- computer, machine,kheti ):')
